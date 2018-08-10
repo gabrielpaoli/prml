@@ -61,16 +61,16 @@ $i = 0;
 	      'html' => TRUE,
 	    );
 		  $height_title = '50px';      
-		  $height_body = '350px';   
+		  $height_body = '450px';   
 		}
 
     $body = $body;
     $body = views_trim_text($alter_body, $body);
 
 
-    print '<div class="'.$columna.'">';
+    print '<div class="'.$columna.'" style="margin-bottom: 20px;">';
       
-      print '<div class="imagen_custom thumbnail '.$nota_sin_foto.'">';
+      print '<div style="margin-bottom: 0px !important;" class="imagen_custom thumbnail '.$nota_sin_foto.'">';
 
 		    if(isset($value->field_field_image[0])){
           print '<img src="'.$imagen.'">';
