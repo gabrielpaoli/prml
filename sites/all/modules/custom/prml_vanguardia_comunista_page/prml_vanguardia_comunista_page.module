@@ -1,0 +1,33 @@
+<?php
+
+
+
+function prml_vanguardia_comunista_page_menu() {
+    $items['vanguardia-comunista'] = array(
+      'title' => 'Vanguardia Comunista',
+      'page callback' => 'vanguardia_comunista_page',
+      'access arguments' => array('access content'),
+    );
+    return $items;
+  }
+
+  function vanguardia_comunista_page() {
+    include('includes/vanguardia_comunista_page.php');
+    $output = '';
+
+    $vc_content = vc_page_content();
+    $output .= $vc_content;
+
+    return $output;
+
+  }
+
+
+
+
+
+
+
+
+
+?>

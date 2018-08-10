@@ -1,0 +1,4 @@
+name = PRML VC PAGE
+description = Modulo que genera la página de Vanguardia Comunista
+core = 7.x
+package = PRML

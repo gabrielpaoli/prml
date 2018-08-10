@@ -1,0 +1,4 @@
+name = PRML administracion
+description = Modulo que genera bloques para la aadministracion
+core = 7.x
+package = PRML

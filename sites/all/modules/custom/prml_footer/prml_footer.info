@@ -1,0 +1,4 @@
+name = PRML FOOTER
+description = Modulo que genera el bloque del footer
+core = 7.x
+package = PRML

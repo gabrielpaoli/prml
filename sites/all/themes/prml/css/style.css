@@ -1,0 +1,516 @@
+
+/*
+
+	GENERAL
+
+*/
+
+.rojo {
+	background-color: #F42222;
+}
+
+.texto_blanco{
+	color: white;
+}
+
+.texto_bold{
+	font-weight: bold;
+}
+
+.nopadding{
+	padding: 0px;
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*
+
+	HEADER
+
+*/
+
+
+.titulo_encabezado_pagina{
+	font-size: 74px;
+	font-weight: bold;
+	font-family: 'Arial black', arial;
+	color: yellow;
+	display: inline;
+}
+
+.barra_contenedor_header a:hover{
+	text-decoration: none;
+}
+
+.subtitulo_encabezado_pagina{
+  font-weight: bold;
+  color: yellow;
+  font-size: 9px;
+  margin-top: -18px;
+  margin-left: 6px;
+}
+
+.navbar{
+	margin-bottom: 20px;
+	min-height: 100%;
+}
+
+.navbar-default .navbar-nav > li > a {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.navbar-collapse{
+	padding: 0px;
+}
+
+
+/*
+
+	HOME
+
+*/
+
+
+.contenedor_general_slider_home{
+	background-color: #f8f8f8;
+	padding: 10px;
+	font-size: 8px; font-size: 1vw;
+}
+
+.titulo_slider_home h2{
+	margin-top: 0px;
+}
+
+.home_noticia_destacada{
+	background-color: #f8f8f8;
+}
+
+.titulo_encabezado_home-1{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+
+.nota_sin_foto{
+	background-color: antiquewhite;
+}
+
+.caption .texto_a_la_derecha,
+.texto_a_la_derecha{
+	text-align: right;
+}
+
+.ver_mas_bottom{
+  border-bottom: 1px solid silver;
+  padding-bottom: 8px;
+  border-bottom-style: dashed;
+  padding-top: 8px;
+}
+
+.caption .ver_mas{
+  border-top: 1px solid silver;
+  padding-top: 8px;	
+}
+
+.hora_publ_y_redes{
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+.contenedor_notas_del_home_por_seccion{
+	margin-bottom: 40px;
+}
+
+.contenedor_imagen_nodo_inn{
+	border: 1px solid silver;
+}
+
+.img-responsive{
+	margin: 0 auto
+}
+
+.columna_internacional{
+	background-color: antiquewhite;
+}
+
+.contenedor_notas_bottom_homepage{
+	padding-left: 14px;	
+}
+
+.columna_nacional .argentina_icon{
+  width: 56px;
+  margin-top: -16px;
+  margin-bottom: -12px;
+}
+
+
+/*
+
+	PUBLICACIONES IMPRESAS
+
+*/
+
+
+.contenedor_nombre_taxonomia{
+	margin-top: 10px;
+}
+
+.imagen_sin_margen_izquierdo{
+	padding-left: 0px;
+}
+
+.contenedor_articulos_relacionados_inn{
+  border-bottom: 1px solid;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+}
+
+.contenedor_articulos_relacionados_inn:hover{
+	background-color: #eee;
+}
+
+.contenedor_articulos_relacionados_inn h5{
+	margin-top: 0px;
+}
+
+
+a{
+	color: #333;
+}
+
+a:hover{
+	color: #333;
+}
+
+.texto_justificado{
+	text-align: justify;
+}
+
+.contenedor_publicaciones_impresas{
+  background-color: #f8f8f8;
+  padding: 20px;
+  border: 2px solid white;
+}
+
+
+#block-views-publicaciones-impresas-block-1,
+#block-views-publicaciones-impresas-block-2,
+#block-views-publicaciones-impresas-block-3,
+#block-views-publicaciones-impresas-block-4,
+#block-views-publicaciones-impresas-block-5{
+	margin-bottom: 20px;
+}
+
+.contenedor_img_pub_imp{
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  padding: 4px;	
+  font-size: 11px;
+}
+
+.contenedor_img_pub_imp a{
+  color: white;
+}
+
+.ver_articulos_pub_imp{
+	padding-left: 0px;
+}
+
+.ver_articulos_pub_imp .glyphicon{
+	margin-right: 4px;
+}
+
+.ver_articulos_pub_imp_item_1{
+	border-right: 1px solid white;
+}
+
+.titulo_notas_de_esta_publicacion .glyphicon{
+	margin-right: 12px;
+}
+
+.contenedor_nombre_taxonomia .glyphicon{
+	margin-right: 12px;	
+}
+
+.ver_mas h5{
+    padding: 6px 20px 6px 8px;
+    text-align: right;
+ }
+
+.contenedor_editorial_en_publicacion .ver_mas a{
+	color: white;
+}
+
+.ver_mas .glyphicon{
+	margin-right: 4px;
+}
+
+/*
+
+ARTICULO INN
+
+*/
+
+.contenedor_fecha_en_nodo{
+  padding: 4px;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.dia_node,
+.mes_node,
+.anio_node{
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+.anio_node{
+	border-bottom: 0px;
+}
+
+.contenedor_texto_nodo{
+	padding: 0px;
+}
+
+.primera_letra,
+.cuerpo_del_articulo{
+	display: inline;
+}
+
+.primera_letra{
+  background-color: #F42222;
+  font-size: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  margin-right: 6px;
+  font-weight: bold;
+}  
+
+.cuerpo_del_articulo{
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.fixedElement{
+	width: 70px;
+}
+
+.reloj_en_nodos{
+	text-align: center;
+	width: 100%;
+}
+
+.publicado_en_nodo_inn a{
+	color: #F42222;
+}
+
+.publicado_en_nodo_inn a:hover{
+	text-decoration: none;
+}
+
+.publicado_en_nodo_inn,
+.categoria_nodo_inn,
+.hora_publ_y_redes_node_inn{
+	display: inline;
+	margin-right: 14px;
+	font-size: 12px;
+}
+
+.epigrafe_nodo_inn{
+	font-size: 12px;
+	text-align: center;
+	margin-top: 4px;
+	margin-bottom: 10px;
+	border-top: 1px solid silver;
+	padding-top: 12px;
+}
+
+.contenedor_agregados_nodo_inn{
+	margin-top: 20px;
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
+	margin-bottom: 14px;	
+}
+
+.titulo_notas_relacionadas_node_inn{
+	border-top: 1px solid silver;
+	margin-top: 22px;
+}
+
+/* VANGUARDIA COMUNISTA PAGE */
+
+.body_vc_page{
+  line-height: 36px;
+  font-size: 20px;	
+}
+
+/*
+	FOTER
+*/
+
+.footer{
+  background-color: #F42222;
+  color: yellow;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.contenedor_footer{
+	text-align: center;
+}
+
+.hoz_y_martillo_footer{
+	margin-top: -2px;
+}
+
+/*
+	ADMINISTRACIÓN
+*/
+
+
+.contenedor_add_content_admin_page a:hover{
+	text-decoration: none;
+}
+
+.bloque_gris_admin{
+  min-height: 86px;
+}
+
+.node_add_administracion{
+  margin: 10px;
+  padding: 10px;  
+  background-color: #f8f8f8;
+	font-weight: bold;
+	color: darkgrey;
+  border: 1px solid silver;
+}
+
+.node_add_administracion:hover{
+  background-color: darkgrey;
+	color: white;
+}
+
+.icono_de_administracion{
+  font-size: 70px !important;
+}
+
+.add_content_admin_title{
+  background-color: #f8f8f8;
+  padding: 4px;
+  margin: 5px;
+  padding-left: 24px;
+  color: darkgrey;
+  font-weight: bold;
+  border: 1px solid silver;
+}
+
+.con_borde{
+	border: 1px solid silver;
+}
+
+.menu_50_aniversario a{
+  padding: 16px;
+  background: #e7e7e7;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.menu_50_aniversario a:hover{
+	color: white;
+  background: silver;
+}
+
+.contenedor_logo_50_aniversario img{
+	background: transparent;
+	border: none;
+}
+
+.contenedor_logo_50_aniversario{
+	margin-bottom: 20px;
+}
+
+.view-notas-destacadas-home-middle{
+    margin-bottom: 10px;
+}
+
+.contenedor_notas_destacadas_home_middle h3{
+    background-color: antiquewhite;
+    padding: 6px;
+    padding-left: 14px;
+}
+
+
+#block-prml-fpage-plugin-bloque-fpage-plugin{
+	margin-bottom: 20px;
+}
+
+.hora_publ_y_redes{
+	font-size: 12px;
+}
+
+/*
+	FIXED
+*/
+
+@media all and (max-width: 1200px) {
+  .columna_internacional h2,
+  .columna_nacional h2,
+  .columna_otros h2{
+  	font-size: 24px;
+  }
+}
+@media all and (max-width: 991px) {
+	.fixedElement{
+		width: 100%;
+	}
+}    
+@media all and (max-width: 500px) {
+	.texto_adaptado_encabezado_home_normal{
+		height: 100px !important;
+	}
+	.titulo_encabezado_pagina{
+		font-size: 40px !important;
+	}
+	.barra_contenedor_header .glyphicon-star{
+		font-size: 18px !important;
+		margin-top: 10px !important;
+	}
+	.subtitulo_encabezado_pagina{
+		display: none !important;
+	}
+}
+@media all and (max-width: 286px) {
+	.texto_adaptado_encabezado_home_normal{
+		height: 100% !important;
+	}
+	.hora_publ_y_redes{
+		display: none !important;
+	}
+	.node-type-article h1{
+    font-size: 24px;
+    line-height: 34px;
+	}
+}
+
+
+@media (min-width: 1200px){
+	.container {
+	    width: 1024px;
+	}
+}

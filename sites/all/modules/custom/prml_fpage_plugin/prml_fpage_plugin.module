@@ -1,0 +1,45 @@
+<?php
+
+/**
+* Implements hook_block_info().
+*/
+function prml_fpage_plugin_block_info() {
+  $blocks = array();
+  $blocks['BLOQUE_FPAGE_PLUGIN'] = array(
+    'info' => t('Bloque para fpage plugin'),
+  );
+  return $blocks;
+}
+/**
+* Implements hook_block_view().
+*/
+function prml_fpage_plugin_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'BLOQUE_FPAGE_PLUGIN':
+      $block['subject'] = '';
+      $block['content'] = _PRML_FPAGE_PLUGIN_BLOCK();
+      break;
+  }
+  return $block;
+}
+function _PRML_FPAGE_PLUGIN_BLOCK() {
+ 
+  $output = '';
+
+  $output .= '<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=655244964544019";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, "script", "facebook-jssdk"));</script>
+
+<div class="fb-page" data-href="https://www.facebook.com/PartidoRevolucionarioML" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>';
+
+
+
+  return $output;
+}
+

@@ -1,0 +1,41 @@
+<?php
+
+/**
+* Implements hook_block_info().
+*/
+function prml_footer_block_info() {
+  $blocks = array();
+  $blocks['BLOQUE_FOOTER'] = array(
+    'info' => t('Bloque para footer'),
+  );
+  return $blocks;
+}
+/**
+* Implements hook_block_view().
+*/
+function prml_footer_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'BLOQUE_FOOTER':
+      $block['subject'] = '';
+      $block['content'] = _PRML_FOOTER_BLOCK();
+      break;
+  }
+  return $block;
+}
+function _PRML_FOOTER_BLOCK() {
+ 
+  global $base_url;
+
+  $module_path = drupal_get_path('module', 'prml_footer');
+
+  $output = '';
+
+  $output .= '<div class="contenedor_footer col-md-12">Partido Revolucionario Marxista Leninista - PRML - ex Vanguardia Comunista <img class="hoz_y_martillo_footer" src="'. $base_url . '/' .$module_path.'/img/hoz_y_martillo.png" width="10px"></img> | @2016</div>';
+  $output .= '<div class="col-md-2"></div>';
+
+
+
+  return $output;
+}
+

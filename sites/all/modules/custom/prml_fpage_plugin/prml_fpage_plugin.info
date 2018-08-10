@@ -1,0 +1,4 @@
+name = PRML FACEBOOK PAGE PLUGIN
+description = Modulo que genera un bloque para la página de facebook
+core = 7.x
+package = PRML

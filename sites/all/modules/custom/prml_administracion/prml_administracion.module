@@ -1,0 +1,225 @@
+<?php
+
+/**
+* Implements hook_block_info().
+*/
+function prml_administracion_block_info() {
+  $blocks = array();
+  $blocks['BLOQUE_DE_ADMINISTRACION'] = array(
+    'info' => t('Bloque de administracion'),
+  );
+  return $blocks;
+}
+/**
+* Implements hook_block_view().
+*/
+function prml_administracion_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'BLOQUE_DE_ADMINISTRACION':
+      $block['subject'] = '';
+      $block['content'] = _PRML_ADMINISTRACION_BLOCK();
+      break;
+  }
+  return $block;
+}
+
+
+function prml_administracion_menu() {
+  $items['guardar_datos_de_administracion'] = array(
+    'page callback' => 'guardar_datos_de_administracion_page',
+    'access arguments' => array('access content'),
+  );
+  $items['mostrar_datos_de_administracion'] = array(
+    'page callback' => 'mostrar_datos_de_administracion_page',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+function guardar_datos_de_administracion_page() {
+  $name = $_POST["name"];
+  $comment = $_POST["comment"];
+
+  $insert = db_insert('administracion_ajax')->fields(array(
+    'valor1' => $name,
+    'valor2' => $comment,
+  ))->execute();
+
+  drupal_set_message(t('Settings have been saved'));
+
+  return "Pagina para guardar datos";
+}
+
+function mostrar_datos_de_administracion_page(){
+  
+  $query = db_select('administracion_ajax', 'a')
+  ->fields('a', array('valor1', 'valor2'));
+
+  $result = $query->execute();
+  
+  foreach ($result as $record) {
+    $datos[] = $record;
+  }
+
+  print json_encode($datos);
+
+}
+
+
+
+
+function _PRML_ADMINISTRACION_BLOCK() {
+  global $base_url;
+
+  $output = '';
+
+  $output .= '
+  
+        
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+
+    <form id="contactForm1" action="http://www.prmlargentina.org/prml2/guardar_datos_de_administracion" method="post">
+      Name: <input type="text" name="name" /> 
+      Comment: <input type="text" name="comment" /> 
+      <input type="submit" value="Enviar" />     
+    </form>
+
+    <script type="text/javascript">
+      var frm = jQuery("#contactForm1");
+      frm.submit(function(ev){
+        jQuery.ajax({
+          type: frm.attr("method"),
+          url: frm.attr("action"),
+          data: frm.serialize(),
+          success: function (data) {
+            executeQuery();
+          }
+        });
+          ev.preventDefault();
+      });
+    </script>
+
+    <script>
+
+    function executeQuery() {
+      jQuery.ajax({
+        url: "'.$base_url.'/mostrar_datos_de_administracion", 
+        success: function(data) {
+          jQuery(".contenedor_ajax").empty();
+          jQuery(".contenedor_ajax").append(data);
+        }
+      });
+      //setTimeout(executeQuery, 5000);
+    }
+
+
+
+    </script>
+
+
+  ';
+
+  $output .= '<div class="contenedor_ajax"></div>';
+
+  $output .= '<div class="administration_menu_prml col-md-12 nopadding">';
+
+    $output .= '<div class="contenedor_add_content_admin_page">';
+      $output .= '<div class="add_content_admin_title col-md-12"><h4>Página</h4></div>';
+
+      $output .= '<a href="'.$base_url.'/node/add/article" class="col-md-4 bloque_gris_admin">';
+        $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-pencil-square-o icono_de_administracion"></i></div> <div class="col-md-7">Agregar artículo</div>';
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/node/add/page" class="col-md-4 bloque_gris_admin">';
+        $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-pencil-square-o icono_de_administracion"></i></div> <div class="col-md-7">Agregar página</div>';
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/node/add/publicaciones-impresas" class="col-md-4 bloque_gris_admin">';
+        $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-newspaper-o icono_de_administracion"></i></div> <div class="col-md-7">Agregar publicaciones impresas</div>';
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/admin/structure/menu/manage/main-menu" class="col-md-4 bloque_gris_admin">';
+        $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-bars icono_de_administracion"></i></div> <div class="col-md-7">Administrar menues</div>';
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/admin/structure/nodequeue/3/view/3" class="col-md-4 bloque_gris_admin">';
+        $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-refresh icono_de_administracion"></i></div> <div class="col-md-7">Ordenar home top</div>';
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/admin/structure/nodequeue/5/view/5" class="col-md-4 bloque_gris_admin">';
+        $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-refresh icono_de_administracion"></i></div> <div class="col-md-7">Ordenar home middle</div>';
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/admin/structure/nodequeue/4/view/4" class="col-md-4 bloque_gris_admin">';
+        $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-refresh icono_de_administracion"></i></div> <div class="col-md-7">Ordenar Temas revolucionarios</div>';
+        $output .= '</div>';
+      $output .= '</a>';
+
+
+    $output .= '</div>';  
+
+
+    $output .= '<div class="contenedor_add_content_admin_page">';
+      $output .= '<div class="add_content_admin_title col-md-12"><h4>50 aniversario</h4></div>';
+
+      $output .= '<a href="'.$base_url.'/node/add/militantes-de-vanguardia-comunis" class="col-md-4 bloque_gris_admin">';
+        $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-male icono_de_administracion"></i></div> <div class="col-md-7">Agregar militante de VC</div>';          
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/node/add/afiches-vc" class="col-md-4 bloque_gris_admin">';
+      $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-file-image-o icono_de_administracion"></i></div> <div class="col-md-7">Agregar afiche VC</div>';          
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/node/add/prensas-vc" class="col-md-4 bloque_gris_admin">';
+      $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-newspaper-o icono_de_administracion"></i></div> <div class="col-md-7">Agregar prensa VC</div>';          
+        $output .= '</div>';
+      $output .= '</a>';
+
+      $output .= '<a href="'.$base_url.'/admin/structure/nodequeue/2/view/2" class="col-md-4 bloque_gris_admin">';
+      $output .= '<div class="node_add_administracion col-md-12">';
+          $output .= '<div class="col-md-5"><i class="fa fa-refresh icono_de_administracion"></i></div> <div class="col-md-7">Ordenar camaradas VC</div>';
+        $output .= '</div>';
+      $output .= '</a>';
+
+    $output .= '</div>';
+      
+  $output .= '</div>';
+
+
+
+  return $output;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
