@@ -1,0 +1,198 @@
+<?php
+
+define("PUBLICACIONES_IMPRESAS", "publicaciones-impresas");
+
+function prml_publicaciones_impresas_menu() {
+    $items[PUBLICACIONES_IMPRESAS] = array(
+      'title' => 'Publicaciones impresas',
+      'page callback' => 'prml_publicaciones_impresas_page',
+      'access arguments' => array('access content'),
+    );
+    return $items;
+  }
+
+  function prml_publicaciones_impresas_page(){
+
+    $params = drupal_get_query_parameters();
+    
+    if(isset($params["publicacion"])):
+      $tp = $params["publicacion"];
+    else:
+      $tp = null;
+    endif;
+
+    if(isset($params["page"])):
+      $offset = $params["page"] * 9;
+    else:
+      $offset = '0';
+    endif;
+
+    $type = prml_publicaciones_impresas_parse_tp($tp);
+  
+    $nodes = prml_publicaciones_impresas_get_pi($type, $offset);
+
+    return theme('prml_publicaciones_impresas', array('nodes' => $nodes));
+  }
+
+  function prml_publicaciones_impresas_theme() {
+    return array(
+      'prml_publicaciones_impresas' => array(
+        'render element' => 'elements',
+        'template' => drupal_get_path('module', variable_get('prml_publicaciones_impresas', NULL)) . '/templates/prml-publicaciones-impresas',
+        'variables' => array(
+          'nodes' => NULL,
+        ),          
+      ),    
+    );
+  } 
+
+  function prml_publicaciones_impresas_parse_tp($tp){
+    if($tp == 'congresos'):
+      $id = 6;
+    elseif($tp == 'no-transar'):
+      $id = 4;
+    elseif($tp == 'temas-revolucionarios'):
+      $id = 5;
+    elseif($tp == 'volantes'):
+      $id = 18;
+    else:
+      $id = null;  
+    endif;
+
+    return $id;
+  }
+
+  function prml_publicaciones_impresas_get_pi($type = null, $offset = null, $qty = null){
+    global $base_url;
+
+    $query = db_select('node', 'n');
+    if($type != null):
+      $query->join('field_data_field_tipo_de_publicacion', 'fdftdp', 'fdftdp.entity_id = n.nid');
+      $query->condition('fdftdp.field_tipo_de_publicacion_tid', $type, '=');
+      $query->fields('fdftdp', array('field_tipo_de_publicacion_tid'));
+    endif;
+
+    $query->join('field_data_field_fecha_de_publicacion', 'fdfdp', 'fdfdp.entity_id = n.nid');
+    $query->leftJoin('field_data_field_image', 'fdfi', 'fdfi.entity_id = n.nid');
+
+    $query->leftJoin('field_data_field_archivo', 'fdfa', 'fdfa.entity_id = n.nid');
+
+    $query->fields('n', array('title', 'type', 'nid'));
+    $query->fields('fdfi', array('field_image_fid'));
+    $query->fields('fdfa', array('field_archivo_fid'));
+
+    $query->condition('n.type', 'publicaciones_impresas' , '=');
+    $query->condition('n.status', 1, '=');
+
+    $query->orderBy("fdfdp.field_fecha_de_publicacion_value", "DESC");
+
+    $pre_results = $query->execute(); 
+    $num_of_results = $pre_results->rowCount();
+
+    if($offset != null):
+      $query->range($offset,9);
+    endif;
+
+    if($qty != null && $offset == null):
+      $query->range(0, $qty);
+    endif;
+
+
+    $results = $query->execute(); 
+
+    $nodes = [];
+
+    if($num_of_results == 0):
+      return $nodes["nodes"][0] = array('title' => 'not_found');  
+    endif;
+
+    $nodes["rows"] = $num_of_results;
+
+    foreach($results as $result):
+
+      if(isset($result->field_tipo_de_publicacion_tid)):
+        $type = $result->field_tipo_de_publicacion_tid;
+      else:
+        $type = null;
+      endif;
+
+      $file = null;
+      if(isset($result->field_archivo_fid)):
+        $fid = file_load($result->field_archivo_fid);
+        $uri = $fid->uri;
+        $file = file_create_url($uri);
+      endif;
+
+      $image = null;
+      if(isset($result->field_image_fid)):
+        $image_uri = file_load($result->field_image_fid)->uri;
+        $style = 'publicaciones_impresas';
+        $image = image_style_url($style, $image_uri);
+      endif;
+
+      $path_alias = $base_url . '/' . drupal_get_path_alias('node/'.$result->nid);
+      $nodes["nodes"][] = array('title' => $result->title, 'link' => $path_alias, 'type' => $type, 'image' => $image, 'file' => $file);
+    endforeach;
+
+    return $nodes;
+
+  }
+
+
+
+
+  function prml_publicaciones_impresas_get_ultimo_afiche($qty = 1){
+    global $base_url;
+
+    $query = db_select('node', 'n');
+    $query->leftJoin('field_data_field_image', 'fdfi', 'fdfi.entity_id = n.nid');
+
+    $query->fields('n', array('title', 'type', 'nid'));
+    $query->fields('fdfi', array('field_image_fid'));
+    
+    $query->condition('n.type', 'afiches' , '=');
+    $query->condition('n.status', 1, '=');
+
+    $query->orderBy("n.created", "DESC");
+
+    $pre_results = $query->execute(); 
+    $num_of_results = $pre_results->rowCount();
+
+    if($qty != null):
+      $query->range(0, $qty);
+    endif;
+
+    $results = $query->execute(); 
+
+    $nodes = [];
+
+    if($num_of_results == 0):
+      return $nodes["nodes"][0] = array('title' => 'not_found');  
+    endif;
+
+    $nodes["rows"] = $num_of_results;
+
+    foreach($results as $result):
+
+      $image = null;
+      if(isset($result->field_image_fid)):
+        $image_uri = file_load($result->field_image_fid)->uri;
+        $image_link = file_create_url($image_uri);
+        $style = 'publicaciones_impresas';
+        $image = image_style_url($style, $image_uri);
+      endif;
+
+      $path_alias = $base_url . '/' . drupal_get_path_alias('node/'.$result->nid);
+      $nodes["nodes"][] = array('title' => $result->title, 'link' => $path_alias, 'image' => $image, 'image_link' => $image_link);
+    endforeach;
+
+    return $nodes;
+
+  }
+
+
+
+
+
+
+?>

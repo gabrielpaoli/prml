@@ -1,7 +1,4 @@
 <?php
-
-
-
 function prml_vanguardia_comunista_page_menu() {
     $items['vanguardia-comunista'] = array(
       'title' => 'Vanguardia Comunista',
@@ -21,13 +18,4 @@ function prml_vanguardia_comunista_page_menu() {
     return $output;
 
   }
-
-
-
-
-
-
-
-
-
 ?>

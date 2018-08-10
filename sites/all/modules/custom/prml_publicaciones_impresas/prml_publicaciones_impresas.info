@@ -1,0 +1,4 @@
+name = PRML PUBLICACIONES IMPRESAS PAGES
+description = Modulo que genera laS páginas de publicaciones impresas
+core = 7.x
+package = PRML
