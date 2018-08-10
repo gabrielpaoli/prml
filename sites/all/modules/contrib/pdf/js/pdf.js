@@ -1,10 +1,10 @@
 (function ($) {
   Drupal.behaviors.pdf = {
     attach: function(context, settings) {
-      $('.pdf-pages').each(function(){
+      $('.pdf-pages', context).each(function(){
         var file = $(this).attr('file');
         var scale = $(this).attr('scale');
-        $(this).append('<div id="pdfContainer" class="pdf-content"/>');
+        $(this).html('<div id="pdfContainer" class="pdf-content"/>');
 
         function loadPdf(pdfPath) {
             var pdf = PDFJS.getDocument(pdfPath);
@@ -28,9 +28,9 @@
           var outputScale = getOutputScale(context);
           canvas.width = (Math.floor(viewport.width) * outputScale.sx) | 0;
           canvas.height = (Math.floor(viewport.height) * outputScale.sy) | 0;
-          canvas.style.width = Math.floor(viewport.width) + 'px';
-          canvas.style.height = Math.floor(viewport.height) + 'px';
-
+          canvas.style.width = '100%';
+          canvas.style.maxWidth = Math.floor(viewport.width) + 'px';
+          canvas.style.maxHeight = Math.floor(viewport.height) + 'px';
           // Append the canvas to the pdf container div
           var $pdfContainer = jQuery("#pdfContainer");
           /*
@@ -48,23 +48,23 @@
               top: canvas.offsetTop,
               left: canvas.offsetLeft
             });
-
+/*
           context._scaleX = outputScale.sx;
           context._scaleY = outputScale.sy;
           if (outputScale.scaled) {
             context.scale(outputScale.sx, outputScale.sy);
           }
-
+*/
           $pdfContainer.append($textLayerDiv);
 
           page.getTextContent().then(function (textContent) {
-            var textLayer = new TextLayerBuilder({
+            /*var textLayer = new TextLayerBuilder({
               textLayerDiv: $textLayerDiv.get(0),
               viewport: viewport,
               pageIndex: 0
             });
             textLayer.setTextContent(textContent);
-
+*/
             var renderContext = {
               canvasContext: context,
               viewport: viewport
@@ -78,7 +78,7 @@
 
       });
 
-      var canvases = context.getElementsByClassName("pdf-thumbnail");
+      var canvases = $('canvas.pdf-thumbnail', context);
       Array.prototype.forEach.call(canvases, function(canvas) {
         var file = canvas.attributes.file.value;
         PDFJS.getDocument(file).then(function(pdf) {
